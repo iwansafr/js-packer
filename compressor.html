@@ -1,0 +1,97 @@
+<table border="0" cellspan="2" colspan="2">
+    <tbody>
+        <tr>
+            <td>
+                <script src="packer.js" type="text/javascript">
+                </script>
+                <b>
+                    Compress / Uncompress JavaScript
+                </b>
+                <form action="" class="disabled" id="form" method="post">
+                    <textarea cols="80" id="input" name="input" rows="10" spellcheck="false"></textarea>
+                    <br style="clear: both;">
+                        <div style="display: inline;">
+                            <button id="pack-script" type="button">
+                                Compress
+                            </button>
+                        </div>
+                        <div style="display: inline;text-align: right;">
+                            <label for="base62">
+                                Base62 encode
+                                <input id="base62" name="base62" type="checkbox" value="1"/>
+                            </label>
+                            <label for="shrink">
+                                Shrink variables
+                                <input id="shrink" name="shrink" type="checkbox" value="1"/>
+                            </label>
+                        </div>
+                        <br style="clear: both;">
+                            <div>
+                                <button id="beautify" onclick="return do_js_beautify()" type="button">
+                                    Unpacked
+                                </button>
+                                <select id="tabsize" name="tabsize">
+                                    <option value="1">
+                                        indent with a tab character
+                                    </option>
+                                    <option selected="selected" value="2">
+                                        indent with 2 spaces
+                                    </option>
+                                    <option value="3">
+                                        indent with 3 spaces
+                                    </option>
+                                    <option value="4">
+                                        indent with 4 spaces
+                                    </option>
+                                    <option value="8">
+                                        indent with 8 spaces
+                                    </option>
+                                </select>
+                                <input checked="checked" id="preserve-newlines" type="checkbox">
+                                    <label for="preserve-newlines">
+                                        Preserve empty lines?
+                                    </label>
+                                    <input checked="checked" id="detect-packers" type="checkbox">
+                                        <label for="detect-packers">
+                                            Detect packers?
+                                        </label>
+                                    </input>
+                                </input>
+                            </div>
+                            <label class="copy">
+                                Output :
+                            </label>
+                            <br>
+                                <textarea cols="80" id="output" name="output" onclick="this.select();" readonly="readonly" rows="10" spellcheck="false"></textarea>
+                                <br>
+                                    <button id="clear-all" type="button">
+                                        Clear
+                                    </button>
+                                    <fieldset style="display: none;">
+                                        <p class="error" id="message">
+                                            disabled
+                                        </p>
+                                        <p class="form-buttons" id="output-buttons">
+                                            <button disabled="disabled" id="save-script" type="submit">
+                                                Save
+                                            </button>
+                                            <button disabled="disabled" id="decode-script" type="button">
+                                                Decode
+                                            </button>
+                                        </p>
+                                        <input name="command" type="hidden" value="">
+                                            <input name="filename" type="hidden" value="">
+                                                <input name="filetype" type="hidden" value="">
+                                                </input>
+                                            </input>
+                                        </input>
+                                    </fieldset>
+                                </br>
+                            </br>
+                        </br>
+                    </br>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
